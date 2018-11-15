@@ -1,6 +1,6 @@
 {
   "name": "repl-live",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "node repl with automatic context updating on file change",
   "main": "repl-live.js",
   "author": "Cameron Tacklind <cameron@tacklind.com>",
