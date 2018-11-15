@@ -1,0 +1,32 @@
+{
+  "name": "repl-live",
+  "version": "0.0.0",
+  "description": "node repl with automatic context updating on file change",
+  "main": "repl-live.js",
+  "author": "Cameron Tacklind <cameron@tacklind.com>",
+  "license": "MIT",
+  "scripts": {
+    "prettier": "prettier --write \"**/*.@(js?(on)|md|prettierrc|clang-format|yml)\"",
+    "preversion": "yarn prettier",
+    "postversion": "npm publish",
+    "postpublish": "git push origin master --tags"
+  },
+  "files": [
+    "repl-live.js"
+  ],
+  "keywords": [
+    "repl",
+    "nodemon",
+    "autoreload",
+    "require",
+    "live",
+    "watch",
+    "livereload"
+  ],
+  "dependencies": {
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^1.15.2"
+  }
+}
