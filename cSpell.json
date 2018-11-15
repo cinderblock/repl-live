@@ -1,6 +1,14 @@
 {
-  "version": "0.1",
-  "language": "en",
-  "words": ["autoreload", "cinderblock", "prettierrc", "tacklind"],
-  "flagWords": []
+    "version": "0.1",
+    "language": "en",
+    "words": [
+        "autoreload",
+        "cinderblock",
+        "postpublish",
+        "postversion",
+        "prettierrc",
+        "preversion",
+        "tacklind"
+    ],
+    "flagWords": []
 }
