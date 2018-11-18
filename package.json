@@ -5,6 +5,7 @@
   "main": "repl-live.js",
   "author": "Cameron Tacklind <cameron@tacklind.com>",
   "license": "MIT",
+  "repository": "git@github.com:cinderblock/repl-live.git",
   "scripts": {
     "prettier": "prettier --write \"**/*.@(js?(on)|md|prettierrc|clang-format|yml)\"",
     "preversion": "yarn prettier",
