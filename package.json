@@ -1,20 +1,35 @@
 {
   "name": "repl-live",
-  "version": "0.1.0",
-  "description": "node repl with automatic context updating on file change",
-  "main": "repl-live.js",
-  "author": "Cameron Tacklind <cameron@tacklind.com>",
-  "license": "MIT",
-  "repository": "git@github.com:cinderblock/repl-live.git",
-  "scripts": {
-    "prettier": "prettier --write \"**/*.@(js?(on)|md|prettierrc|clang-format|yml)\"",
-    "preversion": "yarn prettier",
-    "postversion": "npm publish",
-    "postpublish": "git push origin master --tags"
+  "version": "1.0.0",
+  "description": "Node REPL with automatic context re-require on file change",
+  "type": "module",
+  "main": "dist/repl-live.js",
+  "types": "dist/repl-live.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/repl-live.d.ts",
+      "default": "./dist/repl-live.js"
+    }
   },
   "files": [
-    "repl-live.js"
+    "dist/repl-live.js",
+    "dist/repl-live.js.map",
+    "dist/repl-live.d.ts",
+    "dist/repl-live.d.ts.map"
   ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node --test dist/repl-live.test.js",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cinderblock/repl-live.git"
+  },
   "keywords": [
     "repl",
     "nodemon",
@@ -22,12 +37,20 @@
     "require",
     "live",
     "watch",
-    "livereload"
+    "livereload",
+    "hot-reload"
   ],
+  "author": "Cameron Tacklind <cameron@tacklind.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cinderblock/repl-live/issues"
+  },
+  "homepage": "https://github.com/cinderblock/repl-live#readme",
   "dependencies": {
-    "watch": "^1.0.2"
+    "chokidar": "^4.0.3"
   },
   "devDependencies": {
-    "prettier": "^1.15.2"
+    "@types/node": "^22.19.19",
+    "typescript": "^6.0.3"
   }
 }
