@@ -47,7 +47,7 @@
   },
   "homepage": "https://github.com/cinderblock/repl-live#readme",
   "dependencies": {
-    "chokidar": "^4.0.3"
+    "chokidar": "^5.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.19.19",
