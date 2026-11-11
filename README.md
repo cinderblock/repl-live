@@ -66,7 +66,7 @@ startLive({ requires: { foo: './foo.cjs' } });
 
 ## Requirements
 
-- Node.js >= 22.
+- Node.js >= 22.22.
 
 ## License
 
